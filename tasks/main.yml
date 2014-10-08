@@ -1,2 +1,44 @@
 ---
-# tasks file for ansible-vim
+- name: Install dependencies 
+  apt:
+    name={{item}}
+    state=present 
+    update_cache=yes
+  with_items:
+    - git
+    - curl
+    - vim
+  sudo: yes
+
+- name: Copy my .vimrc
+  command: curl -LSso ~/.vimrc https://raw.github.com/ChengLong/configs/master/.vimrc
+  sudo: no
+
+- name: Make directory for Pathogen
+  command: mkdir -p ~/.vim/autoload ~/.vim/bundle
+  sudo: no
+
+- name: Install Pathogen
+  command: curl -LSso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+  sudo: no
+
+- name: Install Solarized
+  git: 
+    repo=git://github.com/altercation/vim-colors-solarized.git 
+    dest=~/.vim/bundle/vim-colors-solarized
+    update=yes
+  sudo: no
+
+- name: Install Nerdtree 
+  git: 
+    repo=https://github.com/scrooloose/nerdtree.git
+    dest=~/.vim/bundle/nerdtree
+    update=yes
+  sudo: no
+
+- name: Install AutoComplPop 
+  git: 
+    repo=https://github.com/vim-scripts/AutoComplPop.git
+    dest=~/.vim/bundle/AutoComplPop
+    update=yes
+  sudo: no
