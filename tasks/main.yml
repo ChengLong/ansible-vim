@@ -27,6 +27,7 @@
     repo=git://github.com/altercation/vim-colors-solarized.git 
     dest=~/.vim/bundle/vim-colors-solarized
     update=yes
+    accept_hostkey=yes
   sudo: no
 
 - name: Install Nerdtree 
@@ -34,6 +35,7 @@
     repo=https://github.com/scrooloose/nerdtree.git
     dest=~/.vim/bundle/nerdtree
     update=yes
+    accept_hostkey=yes
   sudo: no
 
 - name: Install AutoComplPop 
@@ -41,4 +43,5 @@
     repo=https://github.com/vim-scripts/AutoComplPop.git
     dest=~/.vim/bundle/AutoComplPop
     update=yes
+    accept_hostkey=yes
   sudo: no
