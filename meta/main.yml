@@ -7,11 +7,11 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-      - all
+        - all
     - name: Ubuntu 
       versions:
-      - all
- categories:
+        - all
+  categories:
     - development
     - system
-dependencies: []
+  dependencies: []
