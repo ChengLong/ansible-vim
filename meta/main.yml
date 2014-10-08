@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Cheng Long 
-  description: Install pathogen, solarized, Nerdtree and AutoComplPop for Vim 
+  description: Install Pathogen, Solarized, Nerdtree and AutoComplPop for Vim. Copy my .vimrc 
   license: MIT 
   min_ansible_version: 1.7
   platforms:
