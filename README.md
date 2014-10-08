@@ -4,7 +4,7 @@ Ansible Role for Vim
 This role:
 
 - install Vim
-- copy [my .vimrc] to ~/.vimrc
+- copy [my .vimrc](https://raw.github.com/ChengLong/configs/master/.vimrc) to ~/.vimrc
 - install Pathogen
 - install Solarized
 - install Nerdtree 
