@@ -43,7 +43,7 @@ Example Playbook
 License
 -------
 
-MIT
+[WTFPL](http://www.wtfpl.net/). See WTFPL
 
 Author Information
 ------------------
