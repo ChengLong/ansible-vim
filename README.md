@@ -9,12 +9,13 @@ This role:
 - install Solarized
 - install Nerdtree 
 - install AutoComplPop
+- install vim-fugitive
 
 Requirements
 ------------
 
 Please note that the task 'Install Dependencies' requires sudo. Please make that the user that your control machine ssh into has *sudo access*. 
-I recommend using `ansible_ssh_user` and `ansible_ssh_user` in your inventory file, e.g.
+I recommend using `ansible_ssh_user` in your inventory file, e.g.
 
 ```
 [test_server]
