@@ -4,11 +4,17 @@
     name={{item}}
     state=present 
     update_cache=yes
-  with_items:
-    - git
-    - curl
-    - vim
+  with_items: dependencies
   sudo: yes
+  when: ansible_os_family == 'Debian'
+
+- name: Install Dependencies 
+  homebrew:
+    name={{item}}
+    state=present 
+    update_homebrew=yes
+  with_items: dependencies
+  when: ansible_os_family == 'Darwin'
 
 - name: Copy my .vimrc
   command: curl -LSso ~/.vimrc https://raw.github.com/ChengLong/configs/master/.vimrc

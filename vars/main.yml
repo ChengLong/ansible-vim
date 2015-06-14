@@ -1,2 +1,6 @@
 ---
-# vars file for ansible-vim
+dependencies:
+  - git
+  - curl
+  - vim
+

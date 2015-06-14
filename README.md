@@ -14,7 +14,7 @@ This role:
 Requirements
 ------------
 
-Please note that the task 'Install Dependencies' requires sudo. Please make that the user that your control machine ssh into has *sudo access*. 
+1. If you are provisioning Debian bases OS, please note that the task 'Install Dependencies' requires sudo. Please make that the user that your control machine ssh into has *sudo access*.
 I recommend using `ansible_ssh_user` in your inventory file, e.g.
 
 ```
@@ -25,6 +25,8 @@ xxx.xxx.xxx.xxx ansible_ssh_user=exampleuser
 You can use `--ask-sudo-pass` when running your playbook
 
 `ansible-playbook playbook.yml -i inventory.ini --ask-sudo-pass`
+
+2. If you are provisioning OSX, you should have 'homebrew' already installed. You don't need sudo
 
 Role Variables
 --------------
