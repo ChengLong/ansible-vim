@@ -70,8 +70,9 @@
   when: ansible_os_family == 'Darwin'
 
 - name: ruby extconf.rb && make
-  command:
-    /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby extconf.rb && make
-    chdir=~/.vim/bundle/command-t/ruby/command-t
+  command: chdir=~/.vim/bundle/command-t/ruby/command-t {{ item }}
+  with_items:
+    - /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby extconf.rb
+    - make
   sudo: no
   when: ansible_os_family == 'Darwin'
