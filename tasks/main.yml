@@ -59,3 +59,19 @@
     update=yes
     accept_hostkey=yes
   sudo: no
+
+- name: Install Command-T for OSX
+  git: 
+    repo=https://github.com/wincent/command-t.git
+    dest=~/.vim/bundle/command-t
+    update=yes
+    accept_hostkey=yes
+  sudo: no
+  when: ansible_os_family == 'Darwin'
+
+- name: ruby extconf.rb && make
+  command:
+    /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby extconf.rb && make
+    chdir=~/.vim/bundle/command-t/ruby/command-t
+  sudo: no
+  when: ansible_os_family == 'Darwin'
