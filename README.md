@@ -11,6 +11,8 @@ This role:
 - install AutoComplPop
 - install vim-fugitive
 
+**This role works for both Debian based OS and OSX.**
+
 Requirements
 ------------
 
@@ -50,7 +52,7 @@ Example Playbook
 License
 -------
 
-[WTFPL](http://www.wtfpl.net/). See WTFPL
+[WTFPL](http://www.wtfpl.net/)
 
 Author Information
 ------------------
