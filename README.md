@@ -14,7 +14,7 @@ This role:
 Requirements
 ------------
 
-1. If you are provisioning Debian bases OS, please note that the task 'Install Dependencies' requires sudo. Please make that the user that your control machine ssh into has *sudo access*.
+1. If you are provisioning Debian based OS, please note that the task 'Install Dependencies' requires sudo. Please make that the user that your control machine ssh into has *sudo access*.
         I recommend using `ansible_ssh_user` in your inventory file, e.g.
 
 	```
