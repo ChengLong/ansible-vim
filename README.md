@@ -12,6 +12,8 @@ This role:
 - install vim-fugitive
 - install CtrlP
 
+**This role works for OS X, Debian and Ubuntu.**
+
 Requirements
 ------------
 

@@ -11,6 +11,9 @@ galaxy_info:
     - name: Ubuntu 
       versions:
         - all
+    - names: Mac OS
+      versions: 
+        - X
   categories:
     - development
     - system
