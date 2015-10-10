@@ -60,19 +60,10 @@
     accept_hostkey=yes
   sudo: no
 
-- name: Install Command-T for OSX
-  git: 
-    repo=https://github.com/wincent/command-t.git
-    dest=~/.vim/bundle/command-t
+- name: Install CtrlP
+  git:
+    repo=https://github.com/kien/ctrlp.vim.git
+    dest=~/.vim/bundle/ctrlp.vim
     update=yes
     accept_hostkey=yes
   sudo: no
-  when: ansible_os_family == 'Darwin'
-
-- name: ruby extconf.rb && make
-  command: chdir=~/.vim/bundle/command-t/ruby/command-t {{ item }}
-  with_items:
-    - /System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby extconf.rb
-    - make
-  sudo: no
-  when: ansible_os_family == 'Darwin'

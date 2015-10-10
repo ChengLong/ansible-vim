@@ -10,9 +10,7 @@ This role:
 - install Nerdtree 
 - install AutoComplPop
 - install vim-fugitive
-- install Command-T for OSX
-
-**This role works for both Debian based OS and OSX.**
+- install CtrlP
 
 Requirements
 ------------
