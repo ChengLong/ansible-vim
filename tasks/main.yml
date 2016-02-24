@@ -1,17 +1,17 @@
 ---
-- name: Install Dependencies 
+- name: Install Dependencies
   apt:
     name={{item}}
-    state=present 
+    state=present
     update_cache=yes
   with_items: dependencies
   sudo: yes
   when: ansible_os_family == 'Debian'
 
-- name: Install Dependencies 
+- name: Install Dependencies
   homebrew:
     name={{item}}
-    state=present 
+    state=present
     update_homebrew=yes
   with_items: dependencies
   when: ansible_os_family == 'Darwin'
@@ -29,23 +29,23 @@
   sudo: no
 
 - name: Install Solarized
-  git: 
-    repo=git://github.com/altercation/vim-colors-solarized.git 
+  git:
+    repo=git://github.com/altercation/vim-colors-solarized.git
     dest=~/.vim/bundle/vim-colors-solarized
     update=yes
     accept_hostkey=yes
   sudo: no
 
-- name: Install Nerdtree 
-  git: 
+- name: Install Nerdtree
+  git:
     repo=https://github.com/scrooloose/nerdtree.git
     dest=~/.vim/bundle/nerdtree
     update=yes
     accept_hostkey=yes
   sudo: no
 
-- name: Install AutoComplPop 
-  git: 
+- name: Install AutoComplPop
+  git:
     repo=https://github.com/vim-scripts/AutoComplPop.git
     dest=~/.vim/bundle/AutoComplPop
     update=yes
@@ -64,6 +64,14 @@
   git:
     repo=https://github.com/kien/ctrlp.vim.git
     dest=~/.vim/bundle/ctrlp.vim
+    update=yes
+    accept_hostkey=yes
+  sudo: no
+
+- name: Install vim-better-whitespace
+  git:
+    repo=https://github.com/ntpeters/vim-better-whitespace.git
+    dest=~/.vim/bundle/vim-better-whitespace
     update=yes
     accept_hostkey=yes
   sudo: no

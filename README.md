@@ -1,4 +1,4 @@
-Ansible Role for Vim 
+Ansible Role for Vim
 =========
 
 This role:
@@ -7,10 +7,11 @@ This role:
 - copy [my .vimrc](https://raw.github.com/ChengLong/configs/master/.vimrc) to ~/.vimrc
 - install Pathogen
 - install Solarized
-- install Nerdtree 
+- install Nerdtree
 - install AutoComplPop
 - install vim-fugitive
 - install CtrlP
+- install vim-better-whitespace
 
 **This role works for OS X, Debian and Ubuntu.**
 
@@ -22,7 +23,7 @@ Requirements
 
 	```
 	[test_server]
-	xxx.xxx.xxx.xxx ansible_ssh_user=exampleuser 
+	xxx.xxx.xxx.xxx ansible_ssh_user=exampleuser
 	```
 
 	You can use `--ask-sudo-pass` when running your playbook
