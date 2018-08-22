@@ -17,15 +17,26 @@
   when: ansible_os_family == 'Darwin'
 
 - name: Copy my .vimrc
-  command: curl -LSso ~/.vimrc https://raw.github.com/ChengLong/configs/master/.vimrc
+  get_url:
+    url: https://raw.github.com/ChengLong/configs/master/.vimrc
+    dest: "~/.vimrc"
   sudo: no
 
 - name: Make directory for Pathogen
-  command: mkdir -p ~/.vim/autoload ~/.vim/bundle
+  file:
+    path: "{{ item }}" 
+    mode: 0755
+    state: directory
   sudo: no
+  with_items:
+    - ~/.vim/
+    - ~/.vim/autoload
+    - ~/.vim/bundle
 
 - name: Install Pathogen
-  command: curl -LSso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+  get_url:
+    url: https://tpo.pe/pathogen.vim
+    dest: "~/.vim/autoload/pathogen.vim"
   sudo: no
 
 - name: Install Solarized
